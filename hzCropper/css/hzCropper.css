@@ -1,0 +1,85 @@
+.hzCropper-wrap {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .hzCropper-wrap .hzCropper-contain {
+    height: 100%;
+    min-height: 20px;
+    word-break: break-word;
+    overflow: hidden; }
+  .hzCropper-wrap .hzCropper-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30; }
+    .hzCropper-wrap .hzCropper-inner:hover {
+      outline: 1px dashed #4ab0ff; }
+    .hzCropper-wrap .hzCropper-inner .hzCropper-handle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      display: none;
+      background-color: #ff634a;
+      cursor: pointer; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.lt {
+        left: -5px;
+        top: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.tc {
+        top: -5px;
+        left: 50%;
+        margin-left: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.rt {
+        right: -5px;
+        top: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.lb {
+        left: -5px;
+        bottom: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.bc {
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.rb {
+        right: -5px;
+        bottom: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.lc {
+        left: -5px;
+        top: 50%;
+        margin-top: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.rc {
+        right: -5px;
+        top: 50%;
+        margin-top: -5px; }
+      .hzCropper-wrap .hzCropper-inner .hzCropper-handle.rotates {
+        width: 12px;
+        height: 12px;
+        top: -30px;
+        left: 50%;
+        margin-left: -6px; }
+        .hzCropper-wrap .hzCropper-inner .hzCropper-handle.rotates:after {
+          content: '';
+          display: block;
+          width: 2px;
+          height: 30px;
+          background-color: #ff634a;
+          position: absolute;
+          left: 5px; }
+  .hzCropper-wrap.active {
+    z-index: 20 !important;
+    *zoom: 1; }
+    .hzCropper-wrap.active .hzCropper-inner {
+      outline: 1px dashed #ff634a !important; }
+      .hzCropper-wrap.active .hzCropper-inner .hzCropper-handle {
+        display: block !important; }
+
+/*# sourceMappingURL=hzCropper.css.map */

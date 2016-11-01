@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>demo</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/hzCropper.css" />
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="./hzCropper.js"></script>
+	<style>
+		html,body{
+			height: 100%;
+			background-color: #e9e8e8;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.page{
+			width: 640px;
+			height: 100%;
+			position: relative;
+			margin: 0 auto;
+			background-color: #fff;
+		}
+		#demo{
+			width: 100%;
+			position: absolute;
+			height: 50px;
+			background-color: #ccc;
+		}
+		#demo2{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left:-100px;
+		}
+		#demo2 img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+
+		<!-- <div class="hzCropper-wrap animated fadeInUp active">
+			<div class="hzCropper-contain">
+				<div class="demo" id="demo">asdsasadas</div>
+			</div>
+			<div class="hzCropper-inner">
+				<div class="hzCropper-handle lt"></div>
+				<div class="hzCropper-handle tc"></div>
+				<div class="hzCropper-handle rt"></div>
+
+				<div class="hzCropper-handle lb"></div>
+				<div class="hzCropper-handle bc"></div>
+				<div class="hzCropper-handle rb"></div>
+			</div>
+		</div> -->
+		<div class="demo" id="demo">asdsasadas</div>
+
+		<div class="demo" id="demo2">
+			<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1477042680&di=56bfb70c802d1167f4d45d1f0807ea5a&src=http://img5.duitang.com/uploads/item/201408/02/20140802211120_t34dW.thumb.224_0.jpeg" alt="" />
+		</div>
+
+	</div>
+</body>
+</html>
+<script>
+$(function(){
+
+	$('#demo').hzCropper({
+		//所有属性非必传
+		
+		//索引
+		index:1,
+		//最小高度,默认20px
+		minHeight:20,
+		//最小宽度，默认20px
+		minWidth:20,
+		//是否选中，默认为false
+		isSelect:true,
+		//拖动结束的回调，并返回data对象结果集:宽度、高度、旋转角度、位置:left、top
+		result:function(data){
+			//console.log(data);
+			//console.log(this);
+		},
+		//选中回调，并返回data对象结果集:宽度、高度、索引、旋转角度、位置:left、top
+		onSelect:function(data){
+			//console.log(data);
+		}
+	});
+
+	$('#demo2').hzCropper({
+		isSelect:true,
+		index:2
+	});
+
+	setTimeout(function(){
+		//销毁拖动框
+		//$('#demo').hzCropper('destroy');
+		//整一块dom移除
+		//$('#demo').hzCropper('removes');
+	},3000);
+
+	$('#demo').on('hzCropper.dragstart',function(e){
+		//e.preventDefault();
+		//console.log('开始',e.originalEvent);
+		//console.log('开始',e.dragType);
+		//console.log('start');
+	});
+
+	$('#demo').on('hzCropper.dragmove',function(e){
+		//console.log(this);
+		//e.preventDefault();
+		//console.log('过程',e.originalEvent);
+		//console.log('过程',e.dragType);
+		//console.log('move');
+	});
+
+	$('#demo').on('hzCropper.dragend',function(e){
+		//e.preventDefault();
+		//console.log('结束',e.originalEvent);
+		//console.log('结束',e.dragType);
+		//console.log('end');
+	});
+});
+</script>
