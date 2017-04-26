@@ -310,6 +310,8 @@
 		        that.dragType = dragType;
 		        that.startX = e.pageX;
 		        that.startY = e.pageY;
+		        console.log(that.startX);
+		        console.log(that.startY);
 		    }
 		},
 		//拖动过程
@@ -341,6 +343,7 @@
 		        that.endY = e.pageY;
 		        that.isDrap = true;
 		        that.change();
+		        
 		    }
 		},
 		//拖动结束
@@ -413,7 +416,6 @@
 		        	y: that.endY - that.startY
 		        },
 		        offset;
-
 		    switch(dragType){
 		    	//移动
 		    	case 'move':
@@ -611,6 +613,7 @@
 
 		      	that.renderCropBox();
 		    }
+
 		    // 
 		    that.startX = that.endX;
 		    that.startY = that.endY;
